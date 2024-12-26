@@ -28,7 +28,7 @@ with open('data/authors.json') as f:
 with open('data/quotes.json') as f:
     quotes_data = json.load(f)
     for quote in quotes_data:
-        vector = model.encode(quote['content']).tolist()  # Создание вектора
+        vector = model.encode(quote['content']).tolist() 
         quote_entry = Quote(
             id=quote['id'],
             content=quote['content'],
